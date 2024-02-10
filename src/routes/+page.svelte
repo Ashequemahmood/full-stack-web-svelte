@@ -23,7 +23,7 @@
     .todos{
         width: 100%;
         max-width: 42rem;
-        margin: 0 0 0 4rem;
+        margin: 0 auto;
     }
     .new{
         margin: 0 0 0.5rem 0;
@@ -35,6 +35,9 @@
         border-radius: 8px;
         background-color: antiquewhite;
         text-align: center;
+    }
+    .todos :global(input){
+        border: 1px solid transparent;
     }
 </style>
 
