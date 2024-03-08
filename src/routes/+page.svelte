@@ -1,8 +1,13 @@
+
+
 <script>
     import TodoItem from "$lib/todo-item.svelte"
-
     const title = "Todo";
+    export let data;
+    
 </script>
+
+
 
 <svelte:head>
     <title>{title}</title>
@@ -10,13 +15,15 @@
 
 <div class="todos">
     <h1>{title}</h1>
-<form action="" class="new">
+<form action="/api" method="post" class="new">
     <input type="text" name="text" aria-label="add a todo" placeholder="+ tap to add a todo">
 </form>
 
-<TodoItem/>
-<TodoItem/>
-<TodoItem/>
+
+{#each data.todos as todo}
+    <TodoItem {todo}/>    
+{/each}
+
 </div>
 
 <style>
