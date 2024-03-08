@@ -1,10 +1,14 @@
+<script>
+  export let todo;
+  console.log(todo)
+</script>
 <div class="todo">
     <form action="">
         <input type="hidden" name="done" value="">
         <button aria-label="Mark done/not done" class="toggle"></button>
     </form>
     <form action="">
-        <input type="text">
+        <input type="text" value={todo.text}>
         <button class="save"></button>
     </form>
     <form action="">
