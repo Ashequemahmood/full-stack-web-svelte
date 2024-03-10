@@ -1,7 +1,8 @@
 
 
 <script>
-    import TodoItem from "$lib/todo-item.svelte"
+    import TodoItem from './componets/TodoItem.svelte'
+    import { enhance } from '$app/forms'
     const title = "Todo";
     export let data;
     
@@ -15,7 +16,7 @@
 
 <div class="todos">
     <h1>{title}</h1>
-<form action="/api" method="post" class="new">
+<form action="?/addTodo" method="post" class="new" use:enhance>
     <input type="text" name="text" aria-label="add a todo" placeholder="+ tap to add a todo">
 </form>
 
